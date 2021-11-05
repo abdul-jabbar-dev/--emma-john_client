@@ -15,7 +15,7 @@ const Shop = () => {
     const [page, setPage] = useState(0)
     const size = 10
     useEffect(() => {
-        fetch(`https://ema-john-ecom.herokuapp.com/products?page=${page}&&size=${size}`)
+        fetch(`http://localhost:5000/products?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
